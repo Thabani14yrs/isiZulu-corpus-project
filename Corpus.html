@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Corpus.css">
+</head>
+<body> 
+    <div class="Corpus">
+
+        <!--This is the heading for the Corpus-->
+        <h1>IsiZulu Cultural Corpus</h1>
+
+        <!--Where you search your isiZulu word-->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Bhala igama lesiZulu...">
+            <button onclick="searchCorpus()">Sesha</button>
+        </div>
+
+        <!--Results display here-->
+        <div id="results" class="results" style="display:none;">
+            <p><span class="section-title">isiZulu Word:</span> <span id="zuluWord"></span></p>
+            <p><span class="section-title">English Translation:</span> <span id="englishTranslation"></span></p>
+            <p><span class="section-title">Usage Example:</span> <span id="usageExample"></span></p>
+            <p><span class="section-title">Commonly Paired Words/Phrases:</span></p>
+            <ul id="pairedWords"></ul>
+            <p><span class="section-title">Word Frequency:</span> <span id="wordFrequency"></span> times</p>
+            <p><span class="section-title">Other Corpus Statistics:</span> <span id="otherStats"></span></p>
+        </div>
+
+        <!--Error if search the incorrect word-->
+        <p id="noResults" class="no-results" style="display: none;">Alitholakali leli. Zama elinye igama lesiZulu.</p>
+
+    </div>
+    <script src="Corpus.js"></script>
+</body>
+</html>
